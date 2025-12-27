@@ -1,26 +1,24 @@
-import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-import axios from "axios";
-import {JSDOM} from "jsdom"
+import express from "express";
+import { JSDOM } from "jsdom";
 
-async function send() {
-    let data
-    const response = await axios.get("https://ganje.host/blog/introduction-of-http-status-code-types/", {
-        headers: {
-            "User-Agent":
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-        },
-        responseType: "html",
-    });
+import controls from "./controls.js"
 
-    const dom = new JSDOM(response.data)
+const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-    // console.log(dom.window.document.querySelector("html").textContent);
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
 
-    fs.writeFileSync("./text.txt",dom.window.document.querySelector("body").textContent.trim(),"utf8")
-    
-    
-}
+app.use(controls)
 
-send();
+app.get("/", (req, res) => {
+    console.log("hello");
+    res.sendFile(path.join(__dirname, "/views/index.html"));
+});
+
+app.listen(3000);
+
 
