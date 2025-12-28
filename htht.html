@@ -1,0 +1,2015 @@
+<!-- cached:2025-12-29 02:10:07 -->
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W5S3FK22');</script>
+<!-- End Google Tag Manager -->
+<!-- Start Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y63BM7E513"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y63BM7E513');
+</script>
+<!-- End Google tag (gtag.js) -->
+<!-- Yektanet Start -->
+<script>     !function (t, e, n) { t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-UhyU0Kcg"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/UhyU0Kcg/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
+<!-- Yektanet End -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://7learn.com/assets/css/style.min.css?v=10">
+<link rel="stylesheet" href="https://panel.7learn.com/css/client-common-components.min.css?v=10">
+<meta name="csrf-token" content="">
+<link rel="dns-prefetch" id="storage_url" href="https://up.7learn.com/z"/>
+<link rel="preconnect" href="https://up.7learn.com/z"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#148ef3">
+<meta name="apple-mobile-web-app-title" content="7Learn">
+<meta name="application-name" content="7Learn">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+        <!-- Start LS Smart SEO Tags -->
+<title>آموزش promise در جاوا اسکریپت</title>
+<link rel='canonical' href='https://7learn.com/blog/promise-in-javascript'/>
+<meta name='description' content='Promise به معنای قول دادن و پيمان بستن است. فرض كنيد به يكی از دوستان تان قول داده ايد كه آخر هفته با او به يكی از كافه‌های سطح شهر برويد. حال دو حالت وجود دارد. از  ...'/>
+<meta name='robots' content='index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large'/>
+<meta property='article:published_time' content='2020-07-13T20:48:13+03:30' />
+<meta property='article:modified_time' content='2025-12-17T09:09:50+03:30' />
+<meta property='og:article:author' content='فاطمه افشار' />
+<meta property='og:image' content='https://s3.7learn.com/7learn_Qxz2Jlxk/fdjOnsSmQut6hFXx.jpg' />
+<meta property='og:image:width' content='768' />
+<meta property='og:image:height' content='1024' />
+<meta property='og:image:alt' content='آموزش promise در جاوا اسکریپت' />
+<meta property='og:locale' content='fa_IR' />
+<meta property='og:title' content='آموزش promise در جاوا اسکریپت' />
+<meta property='og:description' content='Promise به معنای قول دادن و پيمان بستن است. فرض كنيد به يكی از دوستان تان قول داده ايد كه آخر هفته با او به يكی از كافه‌های سطح شهر برويد. حال دو حالت وجود دارد. از  ...' />
+<meta property='og:updated_time' content='2025-12-17T09:09:50+03:30' />
+<meta property='og:url' content='https://7learn.com/blog/promise-in-javascript' />
+<meta property='og:type' content='article' />
+<meta name='twitter:title' content='آموزش promise در جاوا اسکریپت' />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:image' content='https://s3.7learn.com/7learn_Qxz2Jlxk/fdjOnsSmQut6hFXx.jpg' />
+<meta name='twitter:description' content='Promise به معنای قول دادن و پيمان بستن است. فرض كنيد به يكی از دوستان تان قول داده ايد كه آخر هفته با او به يكی از كافه‌های سطح شهر برويد. حال دو حالت وجود دارد. از  ...' />
+<!-- END LS Smart SEO Tags -->
+    <style>
+    /* Base Styles */
+    .imageye-selected {
+        outline: 2px solid black !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+    }
+    /* Main Banner Styling with Animation */
+    #promotion-banner {
+        /* Changed to a deep dynamic gradient for Yalda (Pomegranate/Red theme) */
+        background: linear-gradient(270deg, #660000, #b30000, #ff1a1a) !important;
+        background-size: 600% 600% !important;
+        position: relative;
+        overflow: hidden; /* Prevents particles from spilling out */
+        animation: gradientAnimation 8s ease infinite;
+    }
+    /* Ensuring content stays above particles */
+    #promotion-banner .container {
+        position: relative;
+        z-index: 2;
+    }
+    /* Particle Effect Implementation */
+    #promotion-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 200%;
+        height: 100%;
+        /* Creating dots using radial gradient - kept white for snow effect */
+        background-image: 
+            radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2.5px),
+            radial-gradient(circle, rgba(255, 255, 255, 0.15) 1.5px, transparent 2px);
+        background-size: 30px 30px, 50px 50px;
+        background-position: 0 0, 15px 15px;
+        z-index: 1;
+        pointer-events: none; /* Crucial: allows clicks to pass through to the link */
+        animation: particlesMove 15s linear infinite;
+    }
+    /* Typography & Layout */
+    #promotion-banner .alert .title, .sc-rlink .title {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 34px;
+        font-variation-settings: "dots" 4;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Slightly darker shadow for contrast */
+        color: #fff; /* Ensure text is white */
+    }
+    /* Countdown Styling */
+    #promotion-banner .countdown > * {
+        /* Changed to Dark Green (Watermelon Rind) for Yalda contrast */
+        background-color: #013220 !important; 
+        border: 1px solid #1a5d1a; /* Added a slight border for definition */
+        border-radius: 10px;
+        padding: 15px 22px 9px;
+        min-width: 55px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Added shadow for pop */
+        backdrop-filter: blur(2px); /* Glassmorphism effect */
+    }
+    #promotion-banner .countdown.sm > * .countdown-title {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        line-height: 20px !important;
+        color: #fff; /* Ensure numbers are white */
+    }
+    #promotion-banner .countdown.sm > * .countdown-subtitle {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        color: #e0e0e0; /* Slightly off-white for subtitles */
+    }
+    /* Keyframe Animations */
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    @keyframes particlesMove {
+        0% { transform: translateX(0) translateY(0); }
+        50% { transform: translateX(-20px) translateY(-10px); }
+        100% { transform: translateX(-40px) translateY(0); }
+    }
+    /* Responsive - Tablet */
+    @media only screen and (max-width:1200px) {
+        #promotion-banner .alert .title, .sc-rlink .title {
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 34px;
+            font-variation-settings: "dots" 4;
+        }
+        #promotion-banner .countdown.sm > * .countdown-title {
+            font-size: 20px !important;
+            font-weight: 800 !important;
+            line-height: 20px !important;
+        }
+        #promotion-banner .countdown.sm > * .countdown-subtitle {
+            font-size: 10px !important;
+            font-weight: 500 !important;
+        }
+    }
+    /* Responsive - Mobile */
+    @media only screen and (max-width:992px) {
+        #promotion-banner .countdown {
+            display: none;
+        }
+        #promotion-banner {
+            padding: 10px 30px;
+        }
+    }
+</style>    <link rel="stylesheet" href="https://7learn.com/assets/ckstyle.css">
+    <link rel="manifest" href="https://7learn.com/manifest.json">
+    <link rel="icon" href="https://s3.7learn.com/7learn_YAZX62xG/favicon-2nzdlumy.ico">
+</head>
+<body class="" >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe loading="lazy" src="https://www.googletagmanager.com/ns.html?id=GTM-W5S3FK22"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <noscript class="alert bg-danger">جاوااسکریپت روی مرورگر شما فعال نیست و نمی‌توانید از امکانات سایت استفاده کنید.</noscript>    <header class="header square center min-h-fit--md pb-5 pb-lg-0" >
+    <div class="container py-xxs--sm">
+    <div class="row">
+        <div class="col-12">
+            <div class="navbar ">
+                <i class="navbar-toggle si-menu-r fs-34 text-secondary-70 d-xl-none hoverable ps-2 ps-md-4 py-2"
+                   data-jsc="hamburger-menu-toggle" data-toggle-target=".hamburger-menu-navbar"></i>
+                <a class="navbar-brand" href="https://7learn.com/"></a>
+                <nav class="hamburger-menu-navbar d-none--xl" data-jsc="hamburger-menu-xl">
+                    <div class="dropdown mega-menu dropdown-mega-menu-with-sidebar">
+    <div class="item d-none-after--xl">
+        دوره‌های آموزشی
+    </div>
+    <div class="mega-menu with-sidebar">
+        <div class="menu-sidebar">
+            <a href="https://7learn.com/course/programming-alphabet" class="menu-item active" data-content="menu-item-1">
+                <div class="item-row">
+                    <div class="icon">
+                        <img src="https://7learn.com/assets/img/icons/mega-menu/alefba.png" alt="الفبای برنامه نویسی">
+                    </div>
+                    <span class="title truncate"><span class="text-primary">الفبای</span> برنامه نویسی</span>
+                    <i class="toggle-icon si-chevron-left-r"></i>
+                </div>
+                <div class="item-row d-none--xl">
+                    <small class="subtitle truncate">شناخت دنیای برنامه نویسی برای تازه واردها</small>
+                </div>
+            </a>
+            <a href="https://land.7learn.com/capsules/" class="menu-item" data-content="menu-item-2">
+                <div class="item-row">
+                    <div class="icon">
+                        <img src="https://7learn.com/assets/img/icons/mega-menu/capsules.png" alt="کسپول‌های آموزشی">
+                    </div>
+                    <span class="title truncate"><span class="text-primary">کپسول</span>‌های آموزشی</span>
+                    <i class="toggle-icon si-chevron-left-r"></i>
+                </div>
+                <div class="item-row d-none--xl">
+                    <small class="subtitle truncate">شناخت دقیق حوزه‌های برنامه نویسی</small>
+                </div>
+            </a>
+            <a href="https://land.7learn.com/inception/" class="menu-item" data-content="menu-item-3">
+                <div class="item-row">
+                    <div class="icon">
+                        <img src="https://7learn.com/assets/img/icons/mega-menu/inception.png" alt="مسیر آموزشی اینسپشن">
+                    </div>
+                    <span class="title truncate">مسیر آموزشی <span class="text-primary">اینسپشن</span></span>
+                    <i class="toggle-icon si-chevron-left-r"></i>
+                </div>
+                <div class="item-row d-none--xl">
+                    <small class="subtitle truncate">نقشه راه کامل برای متخصص شدن</small>
+                </div>
+            </a>
+            <a href="https://7learn.com/matrix" class="menu-item" data-content="menu-item-4">
+                <div class="item-row">
+                    <div class="icon">
+                        <img src="https://7learn.com/assets/img/icons/mega-menu/matrix.png" alt="بوت کمپ ماتریکس">
+                    </div>
+                    <span class="title truncate">بوت کمپ <span class="text-primary">ماتریکس</span></span>
+                    <i class="toggle-icon si-chevron-left-r"></i>
+                </div>
+                <div class="item-row d-none--xl">
+                    <small class="subtitle truncate">بوت کمپ ۳ ماهه تبدیل تخصص به درآمد</small>
+                </div>
+            </a>
+            <a href="https://7learn.com/courses" class="menu-item" data-content="menu-item-5">
+                <div class="item-row">
+                    <div class="icon">
+                        <img src="https://7learn.com/assets/img/icons/mega-menu/courses.png" alt="دوره‌های متخصص">
+                    </div>
+                    <span class="title truncate">دوره‌های <span class="text-primary">متخصص</span></span>
+                    <i class="toggle-icon si-chevron-left-r"></i>
+                </div>
+                <div class="item-row d-none--xl">
+                    <small class="subtitle truncate">آموزش‌های ویدیویی جامع</small>
+                </div>
+            </a>
+        </div>
+        <div class="menu-content">
+            <div class="menu-item active" id="menu-item-1">
+                <div class="item-header">
+                    <span class="title">دوره آموزشی <span class="text-primary">الفبای</span> برنامه نویسی</span>
+                    <small class="subtitle">شناخت دنیای برنامه نویسی برای تازه واردها</small>
+                </div>
+                <div class="item-content">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <ul class="default list-with-sguare-icon">
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر تازه وارد هستید و می‌خواهید شروع کنید
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر می‌خواهید شاخه‌های برنامه نویسی را بشناسید
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر به دنبال انتخاب زبان برنامه نویسی مناسب هستی
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer">
+                    <span class="title-bold text-secondary-70">
+                        <span class="strike">۲۰۰ هزار تومان</span>
+                        رایگان
+                    </span>
+                    <a href="https://7learn.com/course/programming-alphabet" class="btn secondary">
+                        آشنایی با دنیای برنامه نویسی
+                        <i class="si-arrow-left-r"></i>
+                    </a>
+                </div>
+                <img class="item-bg" src="https://7learn.com/assets/img/mega-menu/alefba.png" alt="">
+            </div>
+            <div class="menu-item" id="menu-item-2">
+                <div class="item-header">
+                    <span class="title"><span class="text-primary">کپسول‌</span>های آموزشی</span>
+                    <small class="subtitle">شناخت دقیق حوزه‌های برنامه نویسی</small>
+                </div>
+                <div class="item-content">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <ul class="default list-with-sguare-icon">
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    با کپسول ها، زبان برنامه نویسی دلخواهت رو بشناس !
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    از اتلاف هزینه‌های زمانی و مالی جلوگیری کن
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    از حوزه ای که انتخاب کردی مطمئن شو !
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer">
+                    <span class="title-bold text-secondary-70">
+                        <span class="strike">۴۰۰ هزار تومان</span>
+                        ۸۰ هزار تومان
+                    </span>
+                    <a href="https://land.7learn.com/capsules/" class="btn secondary">
+                        مشاهده کپسول‌های آموزشی
+                        <i class="si-arrow-left-r"></i>
+                    </a>
+                </div>
+                <img class="item-bg" src="https://7learn.com/assets/img/mega-menu/capsules.png" alt="">
+            </div>
+            <div class="menu-item" id="menu-item-3">
+                <div class="item-header">
+                    <span class="title">مسیر آموزشی <span class="text-primary">اینسپشن</span></span>
+                    <small class="subtitle">نقشه راه کامل برای متخصص شدن</small>
+                </div>
+                <div class="item-content">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <ul class="default list-with-sguare-icon">
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر به دنبال یک نقشه راه کامل آموزشی هستید
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر دورهمی‌های اشتراک تجربه را دوست دارید
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر همه آموزش‌های تخصصی ۰ را از ۱۰۰ تا .می خواهید
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer">
+                    <span class="title-bold text-secondary-70">نیازمند قبولی در آزمون ورودی</span>
+                    <a href="https://land.7learn.com/inception/" class="btn secondary">
+                        جزئیات مسیر آموزشی اینسپشن
+                        <i class="si-arrow-left-r"></i>
+                    </a>
+                </div>
+                <img class="item-bg" src="https://7learn.com/assets/img/mega-menu/inception.png" alt="">
+            </div>
+            <div class="menu-item" id="menu-item-4">
+                <div class="item-header">
+                    <span class="title">بوت کمپ <span class="text-primary">ماتریکس</span></span>
+                    <small class="subtitle">بوت کمپ ۳ ماهه تبدیل تخصص به درآمد</small>
+                </div>
+                <div class="item-content">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <ul class="default list-with-sguare-icon">
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر می‌خواهید یک متخصص گرانتر و حرفه‌ای‌تر باشید
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    اگر درآمد شما از تخصصتان عقب مانده است
+                                </li>
+                                <li>
+                                    <i class="icon si-check-r"></i>
+                                    مهارت هایی فراتر از تخصصتان نیاز دارید
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer">
+                    <span class="title-bold text-secondary-70">نیازمند قبولی در آزمون ورودی</span>
+                    <a href="https://7learn.com/matrix" class="btn secondary">
+                        جزئیات بوت کمپ ماتریکس
+                        <i class="si-arrow-left-r"></i>
+                    </a>
+                </div>
+                <img class="item-bg" src="https://7learn.com/assets/img/mega-menu/matrix.png" alt="">
+            </div>
+            <div class="menu-item" id="menu-item-5">
+                <div class="item-content">
+                    <div class="menu-child menu lg template-2-columns">
+                        <a href="/course/web-design-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/html-oQEk.svg"
+                                alt="آموزش طراحی وب">
+                            <span class="truncate">آموزش طراحی وب</span>
+                        </a>
+                        <a href="/course/php-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/php(3)-s53Z.svg"
+                                alt="آموزش PHP">
+                            <span class="truncate">آموزش PHP</span>
+                        </a>
+                        <a href="/course/wordpress-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/wordpress-o83B.svg"
+                                alt="آموزش  وردپرس 1402 (پلاگین نویسی و توسعه قالب حرفه ای)">
+                            <span class="truncate">آموزش وردپرس ۲۰۲۴ (پلاگین نویسی و توسعه قالب حرفه ای)</span>
+                        </a>
+                        <a href="/course/seo-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2024/03/logo-seo1-zmXA.png"
+                                alt="آموزش سئو 2024">
+                            <span class="truncate">آموزش سئو ۲۰۲۴</span>
+                        </a>
+                        <a href="/course/data-science-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/data-science-expert-hu0E.svg"
+                                alt="آموزش یادگیری ماشین و علم داده (2024)">
+                            <span class="truncate">آموزش یادگیری ماشین و علم داده (۲۰۲۴)</span>
+                        </a>
+                        <a href="/course/bi-and-data-analysis">
+                            <img loading="lazy" class="icon" src="https://7learn.com/assets/img/icons/logo-icon.svg"
+                                alt="آموزش دوره تحلیل داده با Power BI و DAX">
+                            <span class="truncate">آموزش دوره تحلیل داده با Power BI و DAX</span>
+                        </a>
+                        <a href="/course/ui-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/ui-Ml8B.svg"
+                                alt="آموزش UI  (طراحی رابط کاربری) ۱۴۰۲">
+                            <span class="truncate">آموزش UI (طراحی رابط کاربری) ۱۴۰۳</span>
+                        </a>
+                        <a href="/course/python-web-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/python-web-ra7B.svg"
+                                alt="آموزش پایتون توسعه وب">
+                            <span class="truncate">آموزش پایتون توسعه وب</span>
+                        </a>
+                        <a href="/course/golang-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/go-lang-ZxQH.svg"
+                                alt="آموزش Golang">
+                            <span class="truncate">آموزش Golang</span>
+                        </a>
+                        <a href="/course/react-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/react-DVPx.svg"
+                                alt="آموزش React (ری اکت دولوپر)">
+                            <span class="truncate">آموزش React (ری اکت دولوپر)</span>
+                        </a>
+                        <a href="/course/nodejs-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/nodejs-JVYz.svg"
+                                alt="آموزش NodeJS&rlm; (2024)">
+                            <span class="truncate">آموزش NodeJS&rlm;</span>
+                        </a>
+                        <a href="/course/big-data-engineer-expert">
+                            <img loading="lazy" class="icon"
+                                src="https://up.7learn.com/z/s/2023/09/big-data-engineer-expert-Vkkl.svg"
+                                alt="آموزش مهندسی داده و بیگ دیتا">
+                            <span class="truncate">آموزش مهندسی داده و بیگ دیتا</span>
+                        </a>
+                        <a href="/course/android-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/android-ISQ5.svg"
+                                alt="آموزش برنامه نویسی اندروید">
+                            <span class="truncate">آموزش برنامه نویسی اندروید</span>
+                        </a>
+                        <a href="/course/flutter-expert">
+                            <img loading="lazy" class="icon" src="https://up.7learn.com/z/s/2023/09/flutter-fRZh.svg"
+                                alt="آموزش فلاتر">
+                            <span class="truncate">آموزش فلاتر</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-footer">
+                    <div class="menu-child menu lg pt-xs pt-0--xl bt light br-0 d-flex flex-row">
+                        <a href="https://7learn.com/courses">
+                            <span class="truncate fw-700">همه دوره‌ها</span>
+                            <i class="si-arrow-left-r me-auto fs-25 text-secondary-60"></i>
+                        </a>
+                        <a class="me-auto" href="https://7learn.com/search?default=courses&keyword=%D9%88%D8%A8%DB%8C%D9%86%D8%A7%D8%B1">
+                            <span class="truncate fw-700">دوره‌های رایگان</span>
+                            <i class="si-arrow-left-r me-auto fs-25 text-secondary-60"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                    <a  href="https://7learn.com/community">جامعه‌ها</a>
+                    <a  href="https://7learn.com/blog">وبلاگ</a>
+                    <a href="https://7learn.com/course/programming-alphabet" class="text-primary hoverable">شروع یادگیری
+                        برنامه نویسی</a>
+                </nav>
+                <nav class="actions">
+                    <button class="icon white sm si-search-r navbar-search-box-btn-open navbar-btn-circle"></button>
+                    <a href="https://7learn.com/cart/checkout"
+                       class="btn icon white sm navbar-btn-circle position-relative overflow-inherit d-none">
+                        <i class="si-shopping-basket-r"></i>
+                                            </a>
+                                            <a href="https://7learn.com/auth" class="btn sm d-none d-lg-flex">ورود / عضویت</a>
+                        <a href="https://7learn.com/auth"
+                           class="btn icon white sm si-user-r d-flex d-lg-none navbar-btn-circle"></a>
+                </nav>
+                <form action="https://7learn.com/search" method="get" class="search-box  navbar-search-box">
+    <input type="hidden" name="default" value="posts">
+    <div class="input-group solid lg">
+        <input class="lg" name="keyword" type="text" placeholder="جستجو کنید..." value="">
+        <button class="square white-gray lg" type="submit">
+            <i class="si-search-r"></i>
+        </button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+    </header>
+    <div class="base-content ">
+             <div class="container over-header">
+        <div class="row gx-lg gx-md--lg">
+            <div class="col-xxxl-9 col-xxl-8-5 col-xl-8">
+                <div class="row g">
+                    <div class="col-12">
+    <div class="card-question">
+        <div class="header align-items-stretch">
+            <div class="reply my-2 my-md-0">
+                <span class="title d-flex flex-column align-items-center">
+                    ۴۳
+                </span>
+                <small class="subtitle mb-2 mt-neg-7 d-none d-lg-flex">دیدگاه</small>
+                <small class="subtitle mb-1 mt-neg-10 d-flex d-lg-none">نظر</small>
+                <img src="https://panel.7learn.com/build/assets/user.png" alt="فاطمه افشار" class="avatar" data-tooltip="فاطمه افشار">
+            </div>
+            <div class="text py-3 py-md-0 justify-content-center">
+                <span class="title">آموزش promise در جاوا اسکریپت</span>
+                <ol class="breadcrumb d-none d-sm-inline-flex">
+                    <li><a href="https://7learn.com/">خانه</a></li>
+                    <li><a href="https://7learn.com/blog">وبلاگ</a></li>
+                </ol>
+                <ol class="breadcrumb mt-3 d-inline-flex d-sm-none">
+                    <li><a href="https://7learn.com/blog">وبلاگ</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="content pt-0">
+            <div class="sticky-share d-none--md">
+    <div>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://7learn.com/blog/promise-in-javascript&title=آموزش promise در جاوا اسکریپت"
+           target="_blank" rel="noopener" aria-label="blog-link-linkedin">
+            <i class="si-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/share?text=آموزش promise در جاوا اسکریپت&url=https://7learn.com/blog/promise-in-javascript"
+           target="_blank" rel="noopener" aria-label="blog-link-twitter">
+            <i class="si-twitter"></i>
+        </a>
+        <a href="https://telegram.me/share/url?url=https://7learn.com/blog/promise-in-javascript&text=آموزش promise در جاوا اسکریپت"
+           target="_blank" rel="noopener" aria-label="blog-link-telegram">
+            <i class="si-telegram"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=https://7learn.com/blog/promise-in-javascript"
+           target="_blank" rel="noopener" aria-label="blog-link-whatsapp">
+            <i class="si-whatsapp"></i>
+        </a>
+        <a href="sms:?&body=آموزش promise در جاوا اسکریپت https://7learn.com/blog/promise-in-javascript"
+           target="_blank" rel="noopener" aria-label="blog-link-sms">
+            <i class="si-email"></i>
+        </a>
+    </div>
+</div>            <div class="description text-secondary t-tags">
+                <!-- <img width="960" height="540" src="https://s3.7learn.com/7learn_Qxz2Jlxk/fdjOnsSmQut6hFXx.jpg" alt="آموزش promise در جاوا اسکریپت" class="w-100 base-radius-md mb-sm"> -->
+                <div class="list post-headings">
+    <div class="header-title lg">
+        <span class="headint-title">سرفصل‌های مقاله</span>
+    </div>
+    <ul class="list secondary list-dotted list-load-more list-hoverable indexes-scroll">
+        <input class="list-checkbox" type="checkbox" id="load_more" role="button">
+                            <li data-scroll='0'>promise در جاوا اسکریپت چیست</li>
+                                    <li data-scroll='1'>مزایای promise در جاوا اسکریپت</li>
+                                    <li data-scroll='2'>promise در جاوا اسکریپت چگونه کار می‌کند؟</li>
+                                    <li data-scroll='3'>نحوه ی نوشتن یک promise در جاوا اسکریپت</li>
+                                    <li data-scroll='4'>جمع بندی</li>
+                            </ul>
+</div>                <p class="text-justify">Promise به معنای قول دادن و پيمان بستن است. فرض كنيد به يكی از دوستان تان قول داده ايد كه آخر هفته با او به يكی از كافه‌های سطح شهر برويد. حال دو حالت وجود دارد. از آنجايی كه قرار است آخر هفته كه يك زمان در آينده است، اين كار انجام شود، احتمال دارد بتوانيد به قول خود پايبند باشيد، و احتمال دارد كاری برای شما پيش بيايد و نتوانيد به قول خود عمل كنيد. مفهوم promise در جاوا اسکریپت ، رفتاری مشابه به اين بحث دارد، كه در ادامه به آن می‌پردازيم.</p><h2 class="text-justify">promise در جاوا اسکریپت چیست</h2><p class="text-justify">قبل از پرداختن به هر موضوعی می‌خواهيم به پاسخ اين سوال بپردازيم، كه كاربرد&nbsp; Promise چيست؟</p><p class="text-justify">در جاوا اسكريپت Promise كاربردی مشابه callback function دارد. به این معنی که از Promise همانند callback function برای مدیریت کردن دستورات غیر همزمان یا asynchronous استفاده می‌کنیم. حال سوال پیش می‌آید که منظور از دستورات asynchronous چیست؟</p><p class="text-justify">پردازش کد در کامپیوترزبان جاوا اسکریپت یک زبان مفسری است. در زبان‌های مفسری، اجرای کدها به صورت خط به خط است. همچنین جاوا اسکریپت یک زبان رویدادگرا نیز هست. به این معنی که زمانیکه در ترجمه خط به خط کد‌ها مفسر به یک بخشی از کد برای مثال به یک تابع برخورد می‌کند که فرآیند دریافت پاسخ توسط تابع طولانی است، همزمان با اجرای آن بخش از کد، به خط‌های بعدی برنامه رفته و آن‌ها را اجرا می‌کند. زمانی که پاسخ از تابع زمانبر دریافت شد، برای اجرا باید منتظر اتمام اجرای کد‌های جلوتر خود باشد. به نوعی وارد یک صف اجرا می‌شود که برای اجرا باید منتظر شود که به اول این صف برسد و سپس اجرا شود. به دو صورت زیر انجام می‌شود:</p><p class="text-justify">- Asynchronous یا پردازش ناهمگام (غیر همزمان):&nbsp;در این نوع پردازش، زمانی که پردازشگر شروع به پردازش می‌کند، بدون اینکه منتظر اتمام پردازش اول باشد، پردازش دوم را شروع می‌کند.</p><p class="text-justify">- synchronous یا پردازش همگام (Blocking):&nbsp;در این نوع پردازش، پردازشگر ابتدا پردازش اول را به طور کامل به پایان می‌رساند، سپس پردازش دوم را شروع می‌کند.</p><p class="text-justify">زبان جاوا اسکریپت یک زبان مفسری است. در زبان‌های مفسری، اجرای کدها به صورت خط به خط است. همچنین جاوا اسکریپت یک زبان رویدادگرا نیز هست. به این معنی که زمانی که، در ترجمه خط به خط کد‌ها مفسر به یک بخشی از کد برای مثال به یک تابع برخورد می‌کند. که فرآیند دریافت پاسخ توسط تابع طولانی است، همزمان با اجرای آن بخش از کد، به خط‌های بعدی برنامه رفته و آن‌ها را اجرا می‌کند. شرایطی را در نظر بگیرید، که در خواستی را به یک سرور ارسال کرده اید، تا اطلاعاتی را دریافت کنید، که در ادامه به آن اطلاعات احتیاج دارید، تا توابعی که تعریف کرده اید، از آن اطلاعات استفاده کنند. فرض کنید ارسال پاسخ از سمت سرور کمی طولانی شده است. می‌خواهیم کاری کنیم تازمانی که پاسخ سرور مشخص نشده است، کد‌های بعدی اجرا نشود. راه حل چیست؟ راه حل این است، که یا از Promise یا از callback function استفاده کنیم.</p><p class="text-justify">توصیه می‌کنیم قبل از خواندن ادامه ی مقاله، برای درک بهتر و آشنایی با callback function، مقاله ی <a href="https://7learn.com/blog/javascript-callback-functions">callback function چیست</a> را مطالعه کنید.</p><h3 class="text-justify">Callback Function یا Promise</h3><p class="text-justify">پیشتر گفتیم کاربرد Promise همانند callback function&nbsp; است. حال کدام یک از این دو انتخاب بهتری است؟</p><p class="text-justify">قبل از اینکه Promise معرفی شود برای انجام چند وظیفه ی غیر هم زمان از callback function استفاده ی زیادی می‌شد. استفاده از callback function‌ها مشکلاتی نیز به همراه داشت، که یکی از این مشکلات این بود که در برخی موارد منجر به تولید کدی می‌شد، که مدیریت کردن و خطایابی آن بسیار مشکل بود و گاهی غیر قابل کنترل بود. به این کد به اصطلاح callback hell می‌گویند. برای آشنایی بیشتر با این کد‌ها و درک بهتر آن توصیه می‌کنیم مقاله ی <a href="http://callbackhell.com/">callback hell</a> را مطالعه کنید.</p><p class="text-justify">در نتیجه برای جلوگیری از وقوع این مسئله Promise معرفی شد.</p><div class="raw-html-embed"><a href="https://7ln.ir/jsccapblg" class="inline-banner course-banner"> 
+<img loading="lazy" src="https://s3.7learn.com/7learn_qVOp1ZA3/javascript-capsule-bann-u1f5y2rq.jpg 
+" alt="آموزش برنامه نویسی جاوااسکریپت"> 
+</a></div><h2 class="text-justify">مزایای promise در جاوا اسکریپت</h2><p class="text-justify">Promise به ما کمک می‌کند، کدهای خوانا و تمیز‌تری بنویسیم، که قابلیت خطایابی و مدیریت کردن بالاتری نسبت به callback function‌ها دارد. به طور کلی مزایای Promise عبارتند از:</p><p class="text-justify">1- Promise قابلیت خواندن کد را افزایش می‌دهد.</p><p class="text-justify">2- با Promise عملیات asynchronous را بهتر می‌شود مدیریت کرد.</p><p class="text-justify">3- در Promise می‌توانیم خطاهارا بهتر مدریت کنیم.</p><h2 class="text-justify">promise در جاوا اسکریپت چگونه کار می‌کند؟</h2><p class="text-justify">پیشتر گفتیم Promise در جاوا اسکریپت مانند قول و قرار هایی که در زندگی واقعی می‌گذاریم، کار می‌کند. یعنی همان طور که ما قولی را برای انجام کاری در آینده به کسی می‌دهیم، و احتمال دارد، به آن قول پایبند باشیم، یا رد کنیم، در جاوا اسکریپت هم هنگامی که ما یک Promise را تعریف می‌کنیم، با فرا رسیدن زمان آن یا آن Promise حل می‌شود، یا به هر دلیلی رد می‌شود.</p><p class="text-justify">برای مثال فرض کنیم درخواستی را به سمت وب ارسال کرده ایم و منتظر در یافت پاسخ هستیم. حال دو حالت وجود دارد، یا به آن درخواست پاسخ داده می‌شود، و نتیجه ی در خواست را می‌بینیم، یا به هر دلیلی در خواست رد می‌شود، و در نتیجه Error ارسالی از سمت وب را مشاهده می‌کنیم.</p><p class="text-justify">به شکل زیر دقت کنید:</p><p class="text-justify"><img loading="lazy" src="https://up.7learn.com/z/s/wp/2020/07/Promise-state.jpg" alt="promise در جاوا اسکریپت" width="1000" height="600"></p><p class="text-justify">همان طور که در شکل بالا می‌بینید، برای مثال زمانی که ما یک در خواست را توسط Promise&nbsp; به سمت وب ارسال می‌کنیم، تا زمانی که داده هایمان را دریافت نکنیم، در حالت (PENDING) یا انتظار قرار داریم. در صورتی که ما اطلاعات را از server در یافت کنیم، Promise&nbsp; با موفقیت به انجام می‌رسد، و حالت (RESOLVED) اتفاق می‌افتد، در غیر این صورت حالت (REJECTED) اتفاق می‌افتد.</p><p class="text-justify">یک Promise&nbsp; به طور کلی در سه وضعیت زیر قرار دارد:</p><p>pending: به حالتی گفته می‌شود، که در آن Promise هنوز پاسخ داده نشده و وضعیت آن مشخص نیست.</p><p class="text-justify">fulfilled: به حالتی گفته می‌شود، که اقدامات مربوط به Promise موفقیت آمیز باشد.</p><p class="text-justify">rejected: به حالتی گفته می‌شود، که Promise&nbsp; موفق آمیز نباشد.</p><p class="text-justify"><img loading="lazy" src="https://up.7learn.com/z/s/wp/2020/07/Promise-nested.jpg" alt="promise در جاوا اسکریپت" width="1000" height="600"></p><p class="text-justify">لازم به ذکر است که می‌توانیم Promise زنجیره ای داشته باشیم. بدین ترتیب می‌توانیم، کاری کنیم، که یک سری عملیات زنجیره ای غیر همزمان با هم اجرا شوند. در چنین حالتی اجرای عملیات جدید منوط به اجرای موفقیت آمیز عملیات قبل است.</p><h2 class="text-justify">نحوه ی نوشتن یک promise در جاوا اسکریپت</h2><p class="text-justify">یک Promise می‌تواند با استفاده از constructor مانند زیر ایجاد شود:</p><p>var promise = new Promise(function(resolve, reject){
+ &nbsp; &nbsp; //do something
+});</p><p class="text-justify">در قطعه کد فوق یک متغیر به نام promise ایجاد کرده ایم، و با کلید واژه new سازنده یا (constructor)، را صدا زده ایم، و در ادامه یک callback function را به عنوان پارامتر به سازنده داده ایم، که این callback function خود دو تابع با نام‌های resolve و reject دریافت می‌کند.</p><p class="text-justify">در ادامه عملیات داخل این callback function انجام می‌شود، حال اگر عملیات موفقیت آمیز بود، تابع resolve و در غیر این صورت تابع reject فراخوانی می‌شود. به مثال زیر توجه کنید:</p><pre><code class="language-plaintext"> var promise = new Promise(function(resolve, reject){
+     var str="7learn.com";
+     var site="7learn.com";
+     if(str===site) {
+            resolve();
+     } else {
+         reject();
+     }
+ });</code></pre><p class="text-justify">در مثال بالا برابری دو رشته را با هم برای موفقیت آمیز بودن یا نبودن به صورت شرط قرار داده ایم. حال سوالی پیش می‌آید، اگر شرط برقرار بود و تابع resolve شد عملیاتی که در ادامه قرار است انجام شود را چگونه پیاده سازی کنیم؟ یا اگر شرط برقرار نبود و تابع reject فراخوانی شد یا حتی خطایی ارسال شد این وضعیت چگونه مدیریت می‌شود؟</p><p class="text-justify">برای این کار از دو تابع به نام‌های then و catch&nbsp; استفاده می‌کنیم.در ابتدا به معرفی و بررسی تابع then می‌پردازیم :</p><pre><code class="language-plaintext">.then(function(result){
+        //handle success
+ }, function(error){
+        //handle error
+})</code></pre><p class="text-justify">تابع then دو تابع دیگر به عنوان پارامتر دریافت می‌کند. که اگر نتیجه ی Promise موفقیت آمیز بود، کد هایی که در تابع اول وجود دارد، اجرا می‌شود، در غیر این صورت کد هایی که درون تابع دوم وجود دارد، اجرا می‌شود. لازم به ذکر است که وجود تابع دوم ضروری نیست، و به عبارت بهتر Optional می‌باشد، و بهتر است برای&nbsp; مدیریت کردن خطاها از catch استفاده کنیم.</p><p class="text-justify">نحوه ی استفاده از&nbsp; catch به صورت زیر است:</p><pre><code class="language-plaintext">.catch(function(error){
+        //handle error
+})</code></pre><p class="text-justify">حال به مثال قبل باز می‌گردیم و برای استفاده از Promise به صورت زیر عمل می‌کنیم:</p><pre><code class="language-plaintext">promise.then(function () {
+     console.log('Promise is successfully.');
+}).
+ catch(function () {
+     console.log('Some error has occured');
+});</code></pre><p class="text-justify">حال اگر Promise، موفق باشد در کنسول عبارت Promise is successfully، و در غیر این صورت در کنسول، عبارت&nbsp; Some error has occurred نمایش داده می‌شود.</p><h2 class="text-justify">جمع بندی</h2><p class="text-justify">در این مقاله سعی شد تا مفاهیم ساده ای از Promise برای آشنایی مقدماتی با آن ارائه شود. به طور کلی در Promise زمانی که درخواستی ارسال می‌شود یا کاری انجام می‌شود Promise در ابتدا قبل از دریافت پاسخ در حالت انتظار یا&nbsp; PENDING قرار دارد. حال با دو حالت روبه رو هستیم اگر Promise موفقیت آمیز بود کدهایی که در تابع then تعریف کرده بودیم اجرا می‌شود در غیر این صورت کد هایی که در تابع catch تعریف کرده ایم اجرا می‌شود. Promise به دلیل ساختاری که دارد، برای مدیریت کردن خطاها و زدن کد تمیز کمک زیادی به ما می‌کند.</p><blockquote><p>اگر به یادگیری بیشتر در زمینه جاوا اسکریپت علاقه داری، با شرکت در <a href="https://7learn.com/course/vanilla-javascript">دوره آموزشی متخصص جاوا اسکریپت</a> در کمتر از یک سال به یک متخصص JS همه فن حریف تبدیل می‌شوی که آماده ی استخدام، دریافت پروژه و یا فول-استک شدن هستی.</p></blockquote><p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .sidebar-banner img{
+        max-width:300px;
+        border-radius: 10px;
+    }
+    .sidebar-banner img:hover{
+        opacity:0.77;
+    }
+    .post-headings {
+        border: 1px solid #ededed;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        background: 
+        linear-gradient(230deg, rgba(255, 255, 255, 1) 10%,rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0) 100%),url(https://s3.7learn.com/7learn_Qxz2Jlxk/fdjOnsSmQut6hFXx.jpg);
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    @media (max-width: 600px) {
+        .post-headings {
+            background: linear-gradient(240deg, rgba(255, 255, 255, 1) 20%,rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0) 100%),url(https://s3.7learn.com/7learn_Qxz2Jlxk/fdjOnsSmQut6hFXx.jpg);
+        } 
+        .content .description {
+            margin: 0;
+            padding: 5px !important;
+        }
+        .post-headings ul{
+            margin-right:3px !important;
+        }
+        .post-headings ul li{
+            font-size:14px;
+        }
+        .card-question>.header .text{
+            max-width: 78%;
+        }
+    }
+    .post-headings .headint-title{
+        font-size: 18px;
+        font-weight:500;
+        color: var(--secondary) !important
+    }
+    .post-headings ul{
+        margin-right:30px;
+    }
+    .sticky-bottom-dropdown>.menu{
+        background-color: #48a8ff !important;
+    }
+    .sticky-bottom-dropdown>.menu *{
+        color:#ffffff !important;
+        font-weight: 600;
+    }
+    .sticky-bottom-dropdown>.menu .black{
+        color:#000 !important;
+    }
+    .sticky-bottom-dropdown>.menu .badge{
+        background: #333 !important;
+        color:#ffffff !important;
+    }
+</style>                    <div class="col-12">
+    <div class="row g-md px-lg px-0--xxl my-lg my-0--sm">
+        <div class="col-12 mb-xs-neg--md">
+            <span class="t-title-lg">مقالات مرتبط</span>
+        </div>
+                                <div class="col-lg-4 col-sm-6 d-flex">
+                <a href="https://7learn.com/blog/best-programming-languages-for-kids"
+                   class="card-article" title="بهترین زبان‌های برنامه نویسی برای کودکان را بشناسید">
+                    <div class="thumb">
+                        <img src="https://s3.7learn.com/7learn_Qxz2NPxk/mEp7Uku6ek2Lz9Lh.jpg" alt="بهترین زبان‌های برنامه نویسی برای کودکان را بشناسید">
+                    </div>
+                    <div class="text">
+                        <span class="subtitle"></span>
+                        <h3 class="title sm">بهترین زبان‌های برنامه نویسی برای کودکان را بشناسید</h3>
+                    </div>
+                </a>
+            </div>
+                                <div class="col-lg-4 col-sm-6 d-flex">
+                <a href="https://7learn.com/blog/install-react-native-on-windows"
+                   class="card-article" title="آموزش نصب react native در ویندوز">
+                    <div class="thumb">
+                        <img src="https://s3.7learn.com/7learn_67NGpExE/IIVd9Z27qPuA6gqM.jpg" alt="آموزش نصب react native در ویندوز">
+                    </div>
+                    <div class="text">
+                        <span class="subtitle"></span>
+                        <h3 class="title sm">آموزش نصب react native در ویندوز</h3>
+                    </div>
+                </a>
+            </div>
+                                <div class="col-lg-4 col-sm-6 d-flex">
+                <a href="https://7learn.com/blog/tkinter-in-python"
+                   class="card-article" title="آموزش کتابخانه Tkinter در پایتون به همراه مثال کاربردی">
+                    <div class="thumb">
+                        <img src="https://s3.7learn.com/7learn_OAo9MWx0/Nkg8WUGE5oG9CuC2.jpg" alt="آموزش کتابخانه Tkinter در پایتون به همراه مثال کاربردی">
+                    </div>
+                    <div class="text">
+                        <span class="subtitle"></span>
+                        <h3 class="title sm">آموزش کتابخانه Tkinter در پایتون به همراه مثال کاربردی</h3>
+                    </div>
+                </a>
+            </div>
+                                        </div>
+</div>
+                    <div class="col-12 px-lg px-xs--lg mt-xxl mt-lg--md mt-lg--sm pt-sm" id="comments-section">
+    <div class="row justify-content-between align-items-center mb-sm mb-0--md">
+        <div class="col-4 col-sm-6 d-flex align-items-center gap-xs">
+            <span class="t-title-lg"><span class="text-primary">۴۳</span> دیدگاه</span>
+            <div class="rate r-4 d-none d-sm-flex"></div>
+        </div>
+        <div class="col-8 col-sm-6">
+            <button class="float-start btn-form-toggle">
+                <i class="si-comment-text-r"></i>
+                <span class="first-text">ارسال دیدگاه</span>
+                <span class="second-text d-none">بستن فرم</span>
+            </button>
+        </div>
+        <div class="col-12 comment-form d-none" id="comment-form">
+            <form method="post" action="https://7learn.com/blog/add/comment" data-jsc="ajax-form"
+                  data-after-success="refresh" class="card mt-4 gap-xs--sm">
+                <span class="t-title-lg w-100 form-title mb-xs--sm">ما همه سوالات و دیدگاه‌ها رو می‌خونیم و پاسخ میدیم</span>
+                <input type="hidden" name="postId" value="74214">
+                                    <div class="d-block">
+                        <div class="row gy-xs--sm">
+                            <div class="col-sm-6">
+                                <input class="rounded" type="text" name="name" placeholder="نام شما ...">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="rounded" type="text" name="email" placeholder="ایمیل شما ..." class="ltr">
+                            </div>
+                        </div>
+                    </div>
+                                <textarea name="content" id="" rows="4" class="rounded"
+                          placeholder="دیدگاه خودت رو برامون بنویس ..."></textarea>
+                <div class="d-flex align-items-center">
+                    <div class="ratingbar me-auto">
+                        <input type="radio" name="rate" value="5">
+                        <input type="radio" name="rate" value="4">
+                        <input type="radio" name="rate" value="3">
+                        <input type="radio" name="rate" value="2">
+                        <input type="radio" name="rate" value="1">
+                    </div>
+                    <button class="primary me-4 w-fit px-5">ارسال</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-column px-lg px-xs--lg mt mt-xs--sm">
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">هادی آقاجانی</span>
+        <span class="subtitle ltr">۰۳ اسفند ۱۴۰۲، ۱۱:۲۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="273829"
+                   data-author-name="هادی آقاجانی"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام . خیلی خوب و واضح توضیح داده شده است و یکی از بهترین متنهایی که برای Promise بود رو اینجا دیدم . 
+فقط وقتی آسنکرون می‌شود چگونه استفاده می‌شود را هم خوبه به متن اضافه کنید . با تشکر</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۰۷ اسفند ۱۴۰۲، ۰۶:۲۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">درود
+ممنون که با ما همراه هستید. برای سوالتون پیشنهاد میکنم به این لینک مراجعه کنید خیلی جامع و قشنگ توضیح داده:
+https://www.freecodecamp.org/news/how-to-use-promises-in-javascript/#:~:text=The%20async%20keyword%20is%20used,in%20a%20more%20synchronous%20manner.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://s3.7learn.com/7learn_YAZOK37G/mqFHn2asKVBpLyhw.jpg)"></div>
+    <div class="text">
+        <span class="title">جواد رفیعی</span>
+        <span class="subtitle ltr">۱۹ اسفند ۱۴۰۱، ۰۷:۵۵</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="206647"
+                   data-author-name="جواد رفیعی"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">ممنون از شما.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۱۶ آذر ۱۴۰۱، ۱۷:۲۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-4"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="180959"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">ممنون بابت توضیحاتتون خیلی کمک کننده‌اس.
+فقط لینکی که برای معرفی callback hell گذاشتید مشکل داره.
+همچین نشانی‌ایه:  https://callbackhell.com/</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۱۳ آذر ۱۴۰۱، ۰۷:۲۴</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="179854"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">بالاخره متوجه شدم. خیلی خوب توضیح دادید. دم شما گرم</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">Kiarash Jamali</span>
+        <span class="subtitle ltr">۱۴ شهریور ۱۴۰۱، ۰۸:۰۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="156288"
+                   data-author-name="Kiarash Jamali"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">خوب و مفید ممنون از زحماتتون</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">پرهام سلطانی</span>
+        <span class="subtitle ltr">۰۲ مرداد ۱۴۰۱، ۰۶:۲۲</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="143310"
+                   data-author-name="پرهام سلطانی"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">بسیار عالی 
+</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">دانیال بهنام کیا</span>
+        <span class="subtitle ltr">۳۱ فروردین ۱۴۰۱، ۱۰:۰۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="118468"
+                   data-author-name="دانیال بهنام کیا"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">نسبتا خوب بود</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۲۷ فروردین ۱۴۰۱، ۱۷:۴۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-4"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="117540"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">awliiiiii</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۲۲ فروردین ۱۴۰۱، ۰۶:۱۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-1"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="115937"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">ضعیف‌ترین مقالعه ای بود که دیدم و اشتباهات زیادی داشت ( اسم خودتون رو برنامه نویس نزارین )</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۳۰ بهمن ۱۴۰۰، ۲۰:۳۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="103748"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام و درود 
+انصافا خیلی ساده و روان توضیح داده بود و باعث مطلب رو درک کنیم</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">Hamidreza Akbarnezhad</span>
+        <span class="subtitle ltr">۲۳ دی ۱۴۰۰، ۱۱:۲۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="96212"
+                   data-author-name="Hamidreza Akbarnezhad"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">ممنون از مقاله خوبتون. من هنوز اول مقاله هستم. ولی این جمله در ابتدای مقاله دوبار تکرار شده که اصلا جالب نبود برام:
+&amp;quot;زبان جاوا اسکریپت یک زبان مفسری است. در زبان‌های مفسری، اجرای کدها به صورت خط به خط است. همچنین جاوا اسکریپت یک زبان رویدادگرا نیز هست. به این معنی که زمانی که، در ترجمه خط به خط کد‌ها مفسر به یک بخشی از کد برای مثال به یک تابع برخورد می‌کند. که فرآیند دریافت پاسخ توسط تابع طولانی است، همزمان با اجرای آن بخش از کد، به خط‌های بعدی برنامه رفته و آن‌ها را اجرا می‌کند.&amp;quot;
+لطفا اصلاح بشه. باتشکر</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۱۰ دی ۱۴۰۰، ۰۰:۱۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="93896"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">خیلی ممنون از مقاله خوبتون
+در قسمت هایی که به مقاله callback function چیست لینک دادین؛ لینک‌ها کار نمیکنه 
+یعنی قسمت tutorials در لینک باید به blog تبدیل بشه
+بازم ممنون از مقاله خوبتون</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۱ دی ۱۴۰۰، ۱۰:۳۰</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">درود 
+بله حق با شماست اون لینک رو حذف کردیم، اما پایین همون پاراگراف یه لینک دیگه گذاشتیم که اون اوکیه خداروشکر
+ایشالا سرمون خلوت بشه یه بررسی جامع رو موارد این چنینی خواهیم داشت. ممنون که با ما همراه هستید.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title"></span>
+        <span class="subtitle ltr">۱۹ آذر ۱۴۰۰، ۰۹:۵۴</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="90022"
+                   data-author-name=""
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">واقعا عالی ، خیلی عالی توضیح دادین من ازپنج دوره مختلف اقسمتی هایی که در مورد promise گفته شده بود رو نگاه کردم اما متوجه نشدم، اما بعد از این مقالعه کلا این موضوع برام جا افتاد</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۹ آذر ۱۴۰۰، ۱۵:۳۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">خوشحالیم مقاله براتون مفید بوده دوست عزیز :)</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">محمد</span>
+        <span class="subtitle ltr">۳۰ آبان ۱۴۰۰، ۲۱:۰۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="87226"
+                   data-author-name="محمد"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">عالی بود مرسی ????</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">مهدی </span>
+        <span class="subtitle ltr">۱۲ مهر ۱۴۰۰، ۰۹:۱۸</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-5"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="85905"
+                   data-author-name="مهدی "
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">عالی خوب توضیح دادین </p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۲ مهر ۱۴۰۰، ۱۱:۱۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">ممنون که با ما همراه هستید.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">zahra ghorbani</span>
+        <span class="subtitle ltr">۱۱ شهریور ۱۴۰۰، ۰۷:۳۰</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="85490"
+                   data-author-name="zahra ghorbani"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">kheili awli bod mamnoon .
+khaste nabashid</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۳ شهریور ۱۴۰۰، ۱۲:۵۱</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">درود
+ممنون که با ما همراه هستید</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">zahra ghorbani</span>
+        <span class="subtitle ltr">۱۱ شهریور ۱۴۰۰، ۰۷:۲۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="85489"
+                   data-author-name="zahra ghorbani"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">خیلی عالیییی بود ممنون .</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۳ شهریور ۱۴۰۰، ۱۲:۴۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">ممنون که با ما همراه هستید.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">عاطفه</span>
+        <span class="subtitle ltr">۲۸ اردیبهشت ۱۴۰۰، ۱۸:۴۲</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="83187"
+                   data-author-name="عاطفه"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">خیلی عالی بود دستتون درد نکنه. چه خوب توضیح دادید.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">faezeh</span>
+        <span class="subtitle ltr">۱۹ بهمن ۱۳۹۹، ۱۱:۵۸</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="80966"
+                   data-author-name="faezeh"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">خیلی مفید و کاربردی بود ممنون</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">محمد جواد</span>
+        <span class="subtitle ltr">۰۲ دی ۱۳۹۹، ۱۳:۲۱</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="80109"
+                   data-author-name="محمد جواد"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">بسیار عالی انشاالله روزی برسه دیگه نریم mdn  بجاش بیام  7learn 
+کار نشد نداره 
+:)</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">ehsan</span>
+        <span class="subtitle ltr">۲۱ آبان ۱۳۹۹، ۰۸:۱۵</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="79368"
+                   data-author-name="ehsan"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">مگه داریم توضیح ازین قشنگتر.
+من برنامه نویسیو با سون لرن شروع کردم.واقعا قوی هستین.ایولاااااااااااااااااااااا</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">Mohammad</span>
+        <span class="subtitle ltr">۲۶ مهر ۱۳۹۹، ۱۴:۰۰</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="78905"
+                   data-author-name="Mohammad"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام خدمت شما
+ممنون از این مقاله مفید
+فکر کنم اگه یه مقدار بیشتر مثال توی مقاله باشه بهتر بشه مفهوم رو جا انداخت
+یا مثلا در آخر سر کد هایی که توی مقاله آوردین رو سر هم کنین:</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۲۶ مهر ۱۳۹۹، ۲۳:۴۱</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام. 
+ممنون از فیدبکتون سعی میکنیم در مقالات بعدی به این نکته دقت کنیم :)</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">محمود نقی خانی</span>
+        <span class="subtitle ltr">۲۵ مهر ۱۳۹۹، ۰۳:۵۳</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="78873"
+                   data-author-name="محمود نقی خانی"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">درود بر شما
+به عنوان یک آماتور (خیلی آماتور)، در تفسیر متون انگلیسی درمانده شده بودم. با خود می‌گفتم:&quot;امکان ندارد مباحث پیشرفته PWA در ایران مستند شد باشد. افسوس که ما ایرانی‌ها خیلی از قافله عقبیم.&quot; که به صورت تفاقی این مقاله را دیدم.
+آفرین بر شما گرامیان.
+آدم مذهبی اصلا نیستم ولی
+&quot;اگر علم در ثریا باشد، ایرانیان بر آن دست خواهند یافت.&quot;
+لذت بردم و بسیار
+سپاس گزارم 
+ارادتمند شما 
+محمود نقی خانی</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۲۷ مهر ۱۳۹۹، ۰۰:۱۳</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام. ممنون بابت همراهی و انرژی مثبتی که به ما میدید :)</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">elmira</span>
+        <span class="subtitle ltr">۱۲ مهر ۱۳۹۹، ۱۷:۵۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="78638"
+                   data-author-name="elmira"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام.
+من مفهوم وجود function‌های موجود در متدهایی مثل setTimeout(function(){
+و یا then(function(){}
+رو در نمیکنم، چرا وقتی setTimeout که خودش یک متد هست باید داخلش function نوشته بشه!؟ و اصولاً این نوع function‌های بدون نام چکاره اند؟</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۱۲ مهر ۱۳۹۹، ۱۹:۱۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام.
+همونطور که در متن گفتیم، تابع then دو تابع دیگر به عنوان پارامتر دریافت می‌کند : تابع موفقیت و تابع شکست. که اگر نتیجه‌ی Promise موفقیت آمیز بود، کد هایی که در تابع موفقیت وجود دارد، اجرا می‌شود، در غیر این صورت کد هایی که درون تابع شکست وجود دارد، اجرا می‌شود. 
+در حقیقت اون توابع دومی که داریم اون داخل مینویسم، توابعی هستند که بعد از تابع اصلی اجرا میشوند. تابع then و setTimeout مثل یک پل هستند. تضمین می‌کنند که تابع اول کامل انجام بشه و بعد تابع دوم شروع به کار کنه. 
+اگر متوجه نشدید حتما بگید که با یک مثال براتون قضیه رو باز کنم.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">احمد</span>
+        <span class="subtitle ltr">۰۱ مهر ۱۳۹۹، ۲۲:۵۶</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="78378"
+                   data-author-name="احمد"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام عرض میکنم. اصلا عادت ندارم نظر بدم توی هیچ سایتی، ولی واقعا جا داره یه تشکر ویژه یکنم از نویسنده این مقاله که انقدر تمیز و زیبا توضیح داده بود این مبحث رو. ممنونم واقعا</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۰۲ مهر ۱۳۹۹، ۰۷:۵۳</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام. خوشحالیم که مقاله براتون مفید بوده.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">Mehdi</span>
+        <span class="subtitle ltr">۱۷ شهریور ۱۳۹۹، ۱۱:۲۷</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="77983"
+                   data-author-name="Mehdi"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">سلام 
+بسیار عالی توضیح دادید و لطفا چند مثال دیگه هم بزارید. پس اعمال عملیات ناهمگام به این هدف انجام میشود که بتوان وابستگی‌های یک عملیات را قبل از به پیان رسیدن یه متد مدیریت کرد. که این وابستگی با توجع به نو در عملکرد دارای زمان متغیری است . درسته ؟</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">نازنین کریمی مقدم</span>
+        <span class="subtitle ltr">۰۲ مهر ۱۳۹۹، ۰۸:۳۳</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام. 
+دقیقا همینطوره و نمیشه زمان دقیقی براش تعریف کرد. 
+فرض کنید در سمت سرور میخوایم که مقادیری رو آپدیت کنیم و بعد اون مقادیر جدید رو در جدولی در برنامه نمایش بدیم. اینجا باید حواسمون باشه که اول تابع آپدیت کامل کارش رو انجام بده و بعد تابع گت اطلاعات صدا زده بشه. حالا اینکه چقدر آپدیت طول بکشه مشخص نیست، اما با استفاده از promise ما تضمین میکنیم که تابع گت بعد از آپدیت انجام بشه تا بتونیم مقادیر رو درست نمایش بدیم.</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">مجتبی</span>
+        <span class="subtitle ltr">۰۹ شهریور ۱۳۹۹، ۰۷:۳۲</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="77835"
+                   data-author-name="مجتبی"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">واقعا حرف نداشت بسیار ساده و قابل فهم بود.</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">فائقه نامور</span>
+        <span class="subtitle ltr">۱۱ شهریور ۱۳۹۹، ۱۵:۳۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام وقت بخیر
+ممنون از توجه شما دوست عزیز</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply  ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://7learn.com/assets/img/icons/gravatar.jpeg)"></div>
+    <div class="text">
+        <span class="title">بابک راد</span>
+        <span class="subtitle ltr">۰۱ مرداد ۱۳۹۹، ۱۹:۴۰</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                                <div class="rate r-"></div>
+                                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="77112"
+                   data-author-name="بابک راد"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">شما نوشتید:
+در جاوا اسکریپت کد به صورت ناهمگام پردازش می‌شود و مفسر منتظر پاسخ سرور نمی‌ماند و ادامه‌ی برنامه را اجرا می‌کند و این اتفاقی است، که نمی‌خواهیم بیافتد.
+چرا نمیخواهید این اتفاق بیفتد؟؟ در حالی که جملات بالا دقیقا تعریف ناهمزمانی کد هست. در معنای دقیق‌تر کد جاوااسکریپت نباید منتظر پاسخ بخشی دیگری از کد بمونه و باید روند تفسیر کد تا انتها رو ادامه بده.</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">فاطمه افشار</span>
+        <span class="subtitle ltr">۰۲ مرداد ۱۳۹۹، ۰۴:۱۴</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">سلام همراه عزیز 
+ممنونم از بیان این نکته ?
+مفهوم خوب بیان نشده بود 
+اصلاح شد</p>
+</div>
+    </div>
+            <div>
+<div class="card-reply support ">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">Mohammad</span>
+        <span class="subtitle ltr">۲۵ تیر ۱۳۹۹، ۰۷:۴۱</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                        <a href="#comment-form"
+                   class="btn sm circle transparent si-arrow-corner-ccw-lb-r btn-reply-comment"
+                   data-parent-id="77050"
+                   data-author-name="Mohammad"
+                   data-tooltip="افزودن پاسخ"
+                ></a>
+                    </div>
+    </div>
+    <p class="description t-tags">بسیار روان و ساده بیان شد. ممنون از شما. من چندین بار این مفهوم رو خونده بودم ولی بازم درست درک نمیکردم.</p>
+</div>
+            <div class="card-reply support timeline">
+    <div class="row">
+        <div class="col-7">
+            <div class="badge-user ">
+    <div class="avatar " style="background-image: url(https://panel.7learn.com/build/assets/user.png)"></div>
+    <div class="text">
+        <span class="title">فاطمه افشار</span>
+        <span class="subtitle ltr">۲۶ تیر ۱۳۹۹، ۰۸:۲۹</span>
+    </div>
+</div>        </div>
+        <div class="col-5 me-auto ltr">
+                                </div>
+    </div>
+    <p class="description t-tags">خواهش میکنم ?
+همه ی تلاش ما این هست که مفاهیم رو به زبان ساده و قابل فهم بیان کنیم 
+خوشحالیم که اینطور بوده?</p>
+</div>
+    </div>
+    </div>
+                </div>
+            </div>
+            <div class="col-xxxl-3 col-xxl-3-5 col-xl-4 mt-5 mt-xl-0">
+                <div class="sticky-sidebar transparent px-4 px-lg-0 over-header-reverse d-none d-md-flex">
+    <!-- sidebar top banner -->
+        <div id="sidebar-top" class="sidebar-banner">
+                                <a href="https://url.7learn.com/alphaside">
+                <img src="https://s3.7learn.com/7learn_8Al0mDAz/alefba-1080-1080-q7fhr0w9.jpg" alt="دوره الفبای برنامه‌نویسی" class="mb-4">
+            </a>
+                        </div>
+    </div>            </div>
+        </div>
+    </div>
+    <div class="sticky-bottom-dropdown d-block d-md-none">
+    <div class="menu" style="box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);">
+        <div class="select" data-content=".content-list">
+            <div>
+            شروع <span class="black">رایگان</span> یادگیری برنامه نویسی
+            <span class="badge bg-warning me-2" style="zoom: 0.6; border-radius: 50px;">کلیک کنید 👇</span>
+            </div>
+        </div>
+        <!-- <a href="#comments-section">
+            <i class="si-comments-r"></i>
+        </a>
+        <div data-content=".content-share">
+            <i class="si-share-r"></i>
+        </div>
+        <div class="w-fit px-2" data-content=".content-info">
+            <i class="si-more-vert-r"></i>
+        </div> -->
+    </div>
+    <div class="content content-list text-center"  style="box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);">
+        <div>
+            <p>دوره الفبای برنامه نویسی با هدف انتخاب زبان برنامه نویسی مناسب برای شما و پاسخگویی به سوالات متداول در شروع یادگیری موقتا رایگان شد:</p>
+        </div>
+        <div class="mt-4 mb-2">
+            <del class="ms-4">۲۰۰ هزار تومان</del>
+            <span class="text-success">رایگان</span>
+        </div>
+        <div>
+            <a href="https://url.7learn.com/alphabnav" class="btn">
+                <i class="si-gift-r"></i> دریافت دوره الفبای برنامه نویسی
+            </a>
+        </div>
+    </div>
+    <!-- <div class="content content-share">
+        <span class="t-title fw-700">اشتراک گذاری مقاله در :</span>
+        <div class="pt-2">
+            <a class="btn circle light-primary"
+               href="https://www.linkedin.com/shareArticle?mini=true&url=https://7learn.com/blog/promise-in-javascript&title=آموزش promise در جاوا اسکریپت"
+               target="_blank" rel="noopener" aria-label="blog-link-linkedin">
+                <i class="si-linkedin-in"></i>
+            </a>
+            <a class="btn circle light-primary"
+               href="https://twitter.com/share?text=آموزش promise در جاوا اسکریپت&url=https://7learn.com/blog/promise-in-javascript"
+               target="_blank" rel="noopener" aria-label="blog-link-twitter">
+                <i class="si-twitter"></i>
+            </a>
+            <a class="btn circle light-primary"
+               href="https://telegram.me/share/url?url=https://7learn.com/blog/promise-in-javascript&text=آموزش promise در جاوا اسکریپت"
+               target="_blank" rel="noopener" aria-label="blog-link-telegram">
+                <i class="si-telegram"></i>
+            </a>
+            <a class="btn circle light-primary"
+               href="https://api.whatsapp.com/send?text=https://7learn.com/blog/promise-in-javascript"
+               target="_blank" rel="noopener" aria-label="blog-link-whatsapp">
+                <i class="si-whatsapp"></i>
+            </a>
+            <a class="btn circle light-primary"
+               href="sms:?&body=آموزش promise در جاوا اسکریپت https://7learn.com/blog/promise-in-javascript"
+               target="_blank" rel="noopener" aria-label="blog-link-sms">
+                <i class="si-email"></i>
+            </a>
+        </div>
+    </div>
+    <div class="content content-info">
+        <span class="t-title fw-700"> مدیریت این مطلب :</span>
+        <div class="pt-2">
+            <a class="btn circle light-primary" href="#"
+               target="_blank" rel="noopener" aria-label="blog-link-edit">
+                <i class="si-edit-3"></i>
+            </a>
+        </div>
+    </div> -->
+</div>
+    </div>
+        <footer class="base-footer trapezius top-right text-white" style="--bg: var(--secondary)">
+    <div class="content pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="https://7learn.com/" class="brand hoverable">
+                        <img src="https://7learn.com/assets/img/icons/logo-white.svg" alt="سون‌لرن">
+                    </a>
+                </div>
+                <div class="col-12 my-4 py-3 text-center text-lg-end">
+                    <p class="t-paragraph op-70 text-white">هدف مجموعه سون لرن افزایش سطح کیفیت آموزش و ساختن راهی برای
+                        ورود دانشجویان به بازار کار تخصصی است</p>
+                    <p class="t-paragraph op-70 text-white mt-2">:: زیرساخت سون‌لرن تامین شده توسط همراه خوبمون <a
+                                href="https://parspack.com" target="_blank">پارس‌پک</a>.</p>
+                </div>
+                <div class="col-12 pb-3">
+                    <div class="row">
+                        <div class="col-xxxl-9 col-lg-8 mb-sm--lg">
+                            <nav class="light justify-content-center justify-content-lg-start w-100 w-lg-fit">
+                                <a class="pe-0" href="https://7learn.com/courses">دوره‌های آموزشی</a>
+                                <a href="https://7learn.com/about">درباره ما</a>
+                                <a href="https://7learn.com/rules">قوانین و مقررات</a>
+                            </nav>
+                        </div>
+                        <div class="col-xxxl-3 col-lg-4 my-0 my-md-3 my-lg-0">
+                            <div class="row g-3 justify-content-center justify-content-lg-start">
+                                <div class="col-xl-3 col-lg-3 col-md-2 col-3">
+                                    <div class="card-small py-3 justify-content-center">
+                                        <img src="https://7learn.com/assets/img/icons/footer-nashr.png"
+                                             alt="مرکز فناوری اطلاعات و رسانه‌های دیچیتال"
+                                             class="icon sm gray-hover">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-2 col-3">
+                                    <div class="card-small py-3 justify-content-center">
+                                        <img src="https://7learn.com/assets/img/icons/footer-samandehi.png"
+                                             alt="نشان ملی ثبت رسانه‌های دیجیتال"
+                                             class="icon sm gray-hover" id='rgvjfukzrgvjoeukwlao'
+                                             onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=36384&p=xlaogvkaxlaomcsiaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-2 col-3">
+                                    <a referrerpolicy='origin' target='_blank' class="card-small py-3 justify-content-center"
+                                       href='https://trustseal.enamad.ir/?id=15429&Code=WQOhfU5SUqcmqpYa0VWM' title="نماد تجارت الکترونیکی">
+                                        <img loading="lazy" referrerpolicy='origin' class="icon sm gray-hover"
+                                             src='https://trustseal.enamad.ir/logo.aspx?id=15429&Code=WQOhfU5SUqcmqpYa0VWM'
+                                             alt='نماد تجارت الکترونیکی' style='cursor:pointer' Code='WQOhfU5SUqcmqpYa0VWM'>
+                                    </a>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-2 col-3">
+                                    <div class="card-small py-3 justify-content-center">
+                                        <img src="https://7learn.com/assets/img/icons/footer-sep.png"
+                                             alt="پرداخت الکترونیک سامان کیش"
+                                             class="icon sm gray-hover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <nav class="light contact-us pt-3 flex-wrap justify-content-center justify-content-lg-start">
+                        <a href="https://www.linkedin.com/company/7learn/mycompany/" class="pe-0"
+                           aria-label="footer-link-linkedin-in" rel="nofollow">
+                            <i class="si-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/7learn" aria-label="footer-link-instagram" rel="nofollow">
+                            <i class="si-instagram"></i>
+                        </a>
+                        <a href="tel:02191693477" aria-label="footer-link-telegram" rel="nofollow">
+                            <i class="si-phone"></i>
+                            <span class="d-none d-xxxl-inline"> تلفن:
+                                <small class="ltr d-inline-flex">۰۲۱-۹۱۶۹۳۴۷۷</small>
+                            </span>
+                        </a>
+                        <a href="https://t.me/sup_7Learn" aria-label="footer-link-telegram" rel="nofollow">
+                            <i class="si-telegram"></i>
+                            <span class="d-none d-xxxl-inline"> تلگرام: sup_7Learn@</span>
+                        </a>
+                        <a href="https://wa.me/989032149377" aria-label="footer-link-whatsapp" rel="nofollow">
+                            <i class="si-whatsapp"></i>
+                            <span class="d-none d-xxxl-inline"> واتس‌آپ: ۰۹۰۳۲۱۴۹۳۷۷</span>
+                        </a>
+                        <span class="sm op-70 px-0 flex-grow-1 justify-content-center justify-content-lg-start justify-content-lg-end max-w-100 text-center text-xl-end text-white">
+                            تهران - منطقه ۵ - بلوار اباذر - پیامبر شرقی - مجتمع گلشن - واحد ۵۰۶
+                        </span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://7learn.com/assets/js/jquery.min.js"></script>
+<script type="module" src="https://panel.7learn.com/build/assets/jss-vgMSof0u.js"></script> 
+<script src="https://7learn.com/assets/js/client.js?v=11"></script>    <script src="https://7learn.com/assets/js/plugins/highlight/highlight.min.js"></script>
+<link rel="stylesheet" href="https://7learn.com/assets/js/plugins/highlight/highlight.css">
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre').forEach((el) => {
+            hljs.highlightElement(el);
+        });
+    });
+</script>
+    <!-- Post Headings -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "سرفصل‌های مقاله",
+    "itemListElement": [
+        {
+            "@type": "Chapter",
+            "position": 1,
+            "name": "promise در جاوا اسکریپت چیست",
+            "url": "#section-1"
+        },
+        {
+            "@type": "Chapter",
+            "position": 2,
+            "name": "مزایای promise در جاوا اسکریپت",
+            "url": "#section-2"
+        },
+        {
+            "@type": "Chapter",
+            "position": 3,
+            "name": "promise در جاوا اسکریپت چگونه کار می‌کند؟",
+            "url": "#section-3"
+        },
+        {
+            "@type": "Chapter",
+            "position": 4,
+            "name": "نحوه ی نوشتن یک promise در جاوا اسکریپت",
+            "url": "#section-4"
+        },
+        {
+            "@type": "Chapter",
+            "position": 5,
+            "name": "جمع بندی",
+            "url": "#section-5"
+        }
+    ]
+}</script> 
+<!-- Post breadcrumbs -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "خانه",
+            "item": "https://7learn.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "وبلاگ",
+            "item": "https://7learn.com/blog"
+        }
+    ]
+}</script>
+    <script>
+        $(document).on('click', '.btn-form-toggle', function () {
+            $(this).toggleClass('outline-primary').toggleClass('bg-transparent')
+            $(this).find('.first-text').toggleClass('d-none')
+            $(this).find('.second-text').toggleClass('d-none')
+            $('.comment-form').toggleClass('d-none').find('.parent_id').remove()
+            $('.comment-form .form-title').text('ما همه سوالات و دیدگاه‌ها رو می‌خونیم و پاسخ میدیم')
+        });
+        $(document).on('click', '.btn-reply-comment', function () {
+            let parentId = $(this).data('parent-id')
+            let authorName = $(this).data('author-name')
+            let commentFormParent = $('.comment-form')
+            let commentForm = $('.comment-form form')
+            let commentFormTitle = $('.comment-form .form-title')
+            let btnFormToggle = $('.btn-form-toggle')
+            commentFormParent.removeClass('d-none')
+            commentFormTitle.text('در پاسخ به دیدگاه ' + authorName)
+            commentForm.find('.parent_id').remove()
+            commentForm.append("<input class='parent_id' type='hidden' name='parent_id' value='" + parentId + "'>")
+            btnFormToggle.addClass('outline-primary')
+            btnFormToggle.addClass('bg-transparent')
+            btnFormToggle.find('.first-text').addClass('d-none')
+            btnFormToggle.find('.second-text').removeClass('d-none')
+        });
+    </script>
+    <script>
+        $(".sticky-bottom-dropdown .menu > *").click(function (){
+            let stickyBottomDropdownContent = $(this).data('content');
+            $('.sticky-bottom-dropdown .menu > *').not($(this)).removeClass('active')
+            if (typeof stickyBottomDropdownContent !== "undefined"){
+                $(this).toggleClass('active')
+            }
+            $('.sticky-bottom-dropdown .content:not('+stickyBottomDropdownContent+')').removeClass('show')
+            $(stickyBottomDropdownContent).toggleClass('show')
+        })
+        $('.sticky-bottom-dropdown .content').click(function (){
+            $('.sticky-bottom-dropdown .menu > *').removeClass('active')
+            $(this).removeClass('show')
+        });
+    </script>
+    <script>
+        $(document).click(function(event) {
+            $('.navbar-search-box').removeClass('show')
+            event.stopPropagation()
+        });
+        $('.navbar-search-box').click(function(event){
+            $('.navbar-search-box').addClass('show')
+            event.stopPropagation()
+        });
+        $('.navbar-search-box-btn-open').click(function(event){
+            $('.navbar-search-box').addClass('show');
+            $('.navbar-search-box input[name=keyword]').focus();
+            event.stopPropagation()
+        });
+        $('.navbar-search-box-btn-close').click(function(event){
+            $('.navbar-search-box').removeClass('show')
+            event.stopPropagation()
+        });
+    </script>
+<script src="https://up.7learn.com/1/bnr/mrkt.js"></script>
+</body>
+</html>
